@@ -346,7 +346,7 @@ class _MapScreenState extends State<MapScreen> {
                   // 3. Handle Image Upload if an image was picked
                   if (imageBytes != null && pickedFile != null) {
                     final fileName = 'report_${DateTime.now().millisecondsSinceEpoch}.jpg';
-                    await _supabase.storage.from('report-images').uploadBinary(
+                    await _supabase.storage.from('report-image').uploadBinary(
                           fileName,
                           imageBytes!,
                           fileOptions: const FileOptions(contentType: 'image/jpeg'),
